@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+      contact us
+  </title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="favicon (1).ico" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+  button
+  {
+    background-color: black;
+    color: white;
+    height: 60px;
+    width: 150px;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+  .fa {
+  padding: 15px;
+  font-size: 90px;
+  width: 120px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+@media(max-width: 500px)
+  {
+    .card-deck,.card
+    {
+      display: block;
+      width: 100%;
+    }
+  }
+  .fa-home {
+
+  color: black;
+}
+input{
+	width: 70%;
+	border: 2px dashed #aaa;
+	border-radius: 4px;
+	margin: 8px 0px;
+
+}
+ }
+</style>
+<body>
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <a class="navbar-brand" href="/home">
+   <img src="{% static 'logo.jpeg' %}" height="80px" width="300px" style="padding-left: 10px;margin-top: 0px;">
+   <a href="/home" class="fa fa-home"></a>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-link" href="/aboutus"><h2 style="font-size: 30px;color: #00264d;">&ensp;&ensp; About us </h2> </a>
+      <a class="nav-link" href="/products"><h2 style="font-size: 30px;color: #00264d;">&ensp;&ensp; Our Products </h2> </a>
+      <a class="nav-link" href="/contact us"><h2 style="font-size: 30px;color: #00264d;">&ensp;&ensp; Contact us </h2> </a>
+      <a class="nav-link" href="/blog"><h2 style="font-size: 30px;color: #00264d;">&ensp;&ensp;Blog </h2></a>
+    </div>
+  </div>
+  <hr/>
+</nav>
+<div class="row no-gutters">
+     <div class="col no-gutters">
+     	<div class="leftside ">
+     		<div style="margin-top: 100px;margin-bottom: 40px;margin-left: 100px;margin-right: 100px;"><h1>Contact Us</h1></div>
+     		<div style="margin-bottom: 40px;margin-left: 100px;margin-right: 100px;">
+     		<p>In case you have any queries or complaints, feel free to contact us by filling the form below. We request you to be as specific as possible so that we can respond to you in an expedient manner.You can also apply from here for vacancy and we will contact you soon.</p>
+           </div>
+
+           <form action="submit\" method="POST">
+           	<center>
+           	    {% csrf_token %}
+           	<div style="margin-bottom: 40px;" >
+           	<input type="name" placeholder="Your Name" required name="name">
+           	</div>
+           	<div style="margin-bottom: 40px;" >
+           	<input type="email" placeholder="Email" required name="email">
+           	</div>
+           	<div style="margin-bottom: 40px;" >
+           	<input type="number" placeholder="Mobil No" name="mobile">
+           </div>
+           <div style="margin-bottom: 40px;border: 2px dashed #aaa; width: 70%;" >
+           	<textarea name="message" rows="5" cols="70" placeholder="Message" required></textarea>
+           </div><h3 style="color:green;font-size:20px;"> {{msg}} </h3>
+           <button class="button" id="submit" type="submit">Submit</button>
+
+           </center>
+           </form>
+
+     	</div>
+     </div>
+     <div class="col no-gutters">
+     	<div class="rightside ">
+     		<div style="margin-top: 100px;margin-bottom: 40px;margin-left: 100px;margin-right: 100px;">
+     		<h1>HEAD OFFICE</h1>
+     	    </div>
+
+     			<div style="margin-bottom: 20px;" >
+     		<b>Address:</b> office No .- 2, 2nd Floor, metro plaza,bhopal - 462016(MP).
+                 </div>
+
+             <div style="margin-bottom: 20px;" >
+           <b>Ph.</b>: (+91) 0755- 2921841.
+           </div>
+           <div class="container-fluid mt-4" style="margin-bottom: 20px;margin-left: 80px;margin-right: 30px; ">
+           	<img src="{% static 'head.jpeg' %}" height="30%" width="30%">
+           </div>
+
+           <div style="margin-bottom: 20px;" ><h1>ZONAL OFFICE</h1></div>
+           <div style="margin-bottom: 20px;margin-right:20px;" >
+     		<b>Address:</b> 2nd Floor, jai Hospital Building , Alkapuri mor, Beside Bharat Petroleum, new byepass road,Patna.
+                 </div>
+
+             <div style="margin-bottom: 20px;margin-right:20px; " >
+           <b>Ph.</b>: (+91) 7903124440 , (+91) 9470227337.
+           </div>
+
+           <div class="container-fluid mt-4" style="margin-bottom: 20px;margin-left: 80px;margin-right: 30px; ">
+           	<img src="{% static 'zonal.jpeg' %}" height="30%" width="30%">
+           </div>
+     	</div>
+     </div>
+</div>
+
+
+
+
+ <div class="container-fluid mt-4" style="background-color:  #3366ff;">
+    <center> <h3 style="font-size: 40px;color: white;padding-top: 100px;margin-bottom: 0px;font-weight:bold"> Work with us </h3> </center>
+    <center>
+      <h3 style="font-size: 30px;color: white;margin-top: 100px;margin-bottom: 60px;font-weight:bold">
+        If you are finding a job in pharmacy domain then Amalgus is the best place for you
+        We provide you enough benifits for a healthy and happy life  </h3>
+
+
+    </center>
+  </div>
+<footer style="background-color:white ;">
+    <center> <h3 style="font-size: 40px;color: #3366ff;margin-top: 60px;margin-bottom: 0px;font-weight:bold"> Follow us </h3> </center>
+    <center>
+      <div style="margin-top: 40px;margin-bottom: 40px;">
+        <a href="#" class="fa fa-facebook"></a> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        <a href="#" class="fa fa-twitter"></a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        <a href="#" class="fa fa-linkedin"></a>
+      </div>
+    </center>
+    <div style="margin-top: 30px;background-color: black;">
+      <center style="color: white;padding-top: 10px;padding-bottom: 10px;margin-bottom: 30px;"> Copyrights Amalgam Pharmacy 2020 </center>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>

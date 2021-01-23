@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title> Blog page </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="static/favicon.ico" />
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </head>
+    <style>
+        .card
+        {
+            margin-top:200px;
+        }
+        .card:hover {
+  transform: scale(1.15);
+  box-shadow:6px 6px 15px 14px #ccc;
+}
+         button
+  {
+    background-color: white;
+    color: black;
+    height: 100px;
+    width: 300px;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+
+  .fa {
+  padding: 15px;
+  font-size: 90px;
+  width: 120px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-home {
+
+  color: black;
+
+}
+
+body
+{
+    background-color:#00264d ;
+}
+    </style>
+    <body>
+        {% load static %}
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <a class="navbar-brand" href="/home">
+    <img src="{% static 'logo.jpeg' %}" height="80px" width="300px" style="padding-left: 10px;margin-top: 0px;">
+    <a href="/home" class="fa fa-home"></a>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-link" href="/aboutus"><h2 style="font-size: 30px;color: #00264d;">&ensp;&ensp; About us </h2> </a>
+      <a class="nav-link" href="/products"><h2 style="font-size: 30px;color: #00264d;">&ensp;&ensp; Our Products </h2> </a>
+      <a class="nav-link" href="/contactus"><h2 style="font-size: 30px;color: #00264d;">&ensp;&ensp; Contact us </h2> </a>
+      <a class="nav-link" href="/blog"><h2 style="font-size: 30px;color: #00264d;">&ensp;&ensp;Blog </h2></a>
+    </div>
+  </div>
+  <hr/>
+</nav>
+        <div class="container">
+            <center> <h3 style="font-size: 40px;color: white;padding-top: 50px;margin-bottom: 0px;font-weight:bold;"> Our Posts </h3> </center>
+        {% for post in posts %}
+        <div class="card-deck">
+        <div class="card">
+        <img src="{{ post.img.url }}" height="50%" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title" style="font-size:25px; margin-top:20px;color:#00264d;"> {{post.title}} </h5>
+        <p class="card-text" style="font-size:20px; margin-top:15px;"> {{post.blogtext}} </p>
+        <p class="card-text" style="margin-top:40px;"><small class="text-muted"> Added on : {{post.date}} </small></p>
+        </div>
+        </div>
+        </div>
+        {% endfor %}
+        </div>
+        </div>
+        <div class="container-fluid" style="background-color:  #3366ff;margin-top:400px;">
+        <center> <h3 style="font-size: 40px;color: white;padding-top: 100px;margin-bottom: 0px;font-weight:bold"> Work with us </h3> </center>
+        <center>
+        <h3 style="font-size: 30px;color: white;margin-top: 100px;margin-bottom: 60px;font-weight:bold">
+        If you are finding a job in pharmacy domain then Amalgus is the best place for you
+        We provide you enough benifits for a healthy and happy life  </h3>
+      <button>
+        Know more
+      </button>
+    </center>
+  </div>
+  <footer style="background-color:white ;">
+    <center> <h3 style="font-size: 40px;color: #3366ff;margin-top: 60px;margin-bottom: 0px;font-weight:bold"> Follow us </h3> </center>
+    <center>
+      <div style="margin-top: 40px;margin-bottom: 40px;">
+        <a href="#" class="fa fa-facebook"></a> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        <a href="#" class="fa fa-twitter"></a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        <a href="#" class="fa fa-linkedin"></a>
+      </div>
+    </center>
+    <div style="margin-top: 30px;background-color: black;">
+      <center style="color: white;padding-top: 10px;padding-bottom: 10px;margin-bottom: 30px;"> Copyrights Amalgam Pharmacy 2020 </center>
+    </div>
+  </footer>
+    </body>
+</html>

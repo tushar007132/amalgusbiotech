@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    About us
+  </title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" type="image/x-icon" href="static/favicon.ico" />
+</head>
+<style>
+{% load static %}
+  #box {
+    background-image: url({% static "img1.jpeg" %});
+    padding: 200px 0 180px;
+    background-attachment: fixed;
+    background-position: center center;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+  }
+  .page-sub-title{
+    font-size:12px;letter-spacing:3px;
+  }
+  button
+  {
+    background-color: white;
+    color: black;
+    height: 100px;
+    width: 300px;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+  .fa {
+  padding: 15px;
+  font-size: 90px;
+  width: 120px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-home {
+
+  color: black;
+
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+</style>
+{% load static %}
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <a class="navbar-brand" href="/home">
+    <img src="{% static 'logo.jpeg' %}" height="80px" width="300px" style="padding-left: 10px;margin-top: 0px;">
+    <a href="/home" class="fa fa-home"></a>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-link" href="/aboutus"><h2 style="font-size: 30px;color: #00264d;">&ensp;&ensp; About us </h2> </a>
+      <a class="nav-link" href="/products"><h2 style="font-size: 30px;color: #00264d;">&ensp;&ensp; Our product </h2> </a>
+      <a class="nav-link" href="/contact us"><h2 style="font-size: 30px;color: #00264d;">&ensp;&ensp; Contact us </h2> </a>
+      <a class="nav-link" href="/blog"><h2 style="font-size: 30px;color: #00264d;">&ensp;&ensp;Blog </h2></a>
+    </div>
+  </div>
+  <hr/>
+</nav>
+  <div id="box">
+  <center>
+
+  </center>
+  </div>
+
+     <div>
+       <center><h1 style="margin-top: 100px;margin-bottom: 40px;font-weight: 200"> Who we <b>Are</b></h1></center></div>
+       <div class="container-fluid mt-4">
+        <table class="responsive-table">
+        <tr>
+          <td width="33%" style="text-align: center;"> <img src="{% static 'research.jpg' %}" height="50%" width="50%"> </td>
+          <td width="33%" > <ul><li>
+            <b>AMALGUS BIOTECH PRIVATE LIMITED</b> is a private incorporated on 10 June 2019. It is classified as Non-govt company and is registered at Registrar of Companies, Gwalior. Its authorized share capital is Rs. 1,000,000 and its paid up capital is Rs. 100,000. It is inolved in Social work activities
+          </li>
+          <li>
+            <b>AMALGUS BIOTECH PRIVATE LIMITED</b> industry code is 85320 and its involved in Children, their welfare and guidance activities,Creches, day-care centres for children,Day-care activities for the handicapped,Day-care centres for children (creches),Handicapped, day-care activities,Services, social/counseling/welfare, to homeless,Services, social/counselling/welfare, to individuals or families in their homes,Social/counseling/welfare services to homeless,Social/counseling/welfare services to individuals or families in their homes,Social work activities without accommodation.,Welfare and guidance activities for children
+          </li>
+          <li>
+            <b>AMALGUS BIOTECH PRIVATE LIMITED</b> Corporate Identification Number (CIN) is U85320MP2019PTC048832 and its registration No. is 048832.
+          </li>
+        </ul></td>
+
+        </tr>
+      </table>
+     </div>
+     <div class="container-fluid mt-4" >
+        <table class="responsive-table" style="margin-top: 100px;margin-bottom: 40px;">
+        <tr>
+          <td width="33%" style="text-align: center;">  <img src="{% static 'doc.jpg' %}" height="130%" width="100%"> </td>
+          <td width="33%" bgcolor=" #D3D3D3">
+            <center><h1 style="margin-top: 40px;margin-bottom: 40px;"> OUR COMPANY</h1></center>
+            <p style="margin-top: 40px;margin-bottom: 40px;margin-left: 40px;margin-right: 40px">Amalgus Biotech Private Limited is an unlisted private company. It was incorporated on 10 June, 2019 and is located in Bhopal, Madhya Pradesh. It is classified as a private limited company.
+
+The current status of Amalgus Biotech Private Limited is - Active.
+
+Amalgus Biotech Private Limited has four directors -Amresh Kumar Srivastava, Anchalkumar Srivastava, Vivek Kumar Rana, and Tirdip Kumar Ganguli .
+
+The registered office of Amalgus Biotech Private Limited is at SHOP NO 2, 2nd FLOOR METRO PLAZA NEAR BHITTAN MARKET, BHOPAL, Bhopal, Madhya Pradesh.
+
+The Corporate Identification Number (CIN) of Amalgus Biotech Private Limited is U85320MP2019PTC048832. It's authorized share capital is INR 10.00 lac and the total paid-up capital is INR 1.00 lac.
+
+Details of the last annual general meeting of Amalgus Biotech Private Limited are not available. The company is yet to submit its first full-year financial statements to the registrar.</p>
+          </td>
+
+        </tr>
+      </table>
+     </div>
+<div >
+  <center><h1 style="margin-top: 100px;margin-bottom: 40px;font-weight: 200">Our <b>Directors</b></h1></center>
+      <center ><p style="margin-top: 40px;margin-bottom: 40px;">Industry accomplished team members that embrace a high integrity ethos to building sustained business partnerships</center></p>
+</div>
+<div class="container-fluid mt-4">
+  <table class="responsive-table" style="margin-top: 40px;margin-bottom: 40px;">
+   <tr>
+    <td width="33%" style="text-align: center;">  <img src={% static 'dir.png' %} height="30%" width="30%"> </td>
+    <td>
+      <h1 style="font-weight: 600">AMRESH KUMAR SRIVASTAVA</h1>
+      <br>
+      <p>Amresh Kumar Srivastava is registered with Ministry of Corporate Affairs (MCA). Their DIN is 08475722. Following is their current and past directorship holdings. </p>
+    </td>
+   </tr>
+   <tr>
+    <td width="33%" style="text-align: center;">  <img src={% static 'dir.png' %} height="30%" width="30%"> </td>
+    <td>
+      <h1 style="font-weight: 600">TIRDIP KUMAR GANGULI</h1>
+      <br>
+      <p>Tirdip Kumar Ganguli is registered with Ministry of Corporate Affairs (MCA). Their DIN is 08475763. Following is their current and past directorship holdings.</p>
+    </td>
+   </tr>
+   <tr>
+    <td width="33%" style="text-align: center;margin-top: 100px;margin-bottom: 40px;">  <img src={% static 'dir.png' %} height="30%" width="30%"> </td>
+    <td>
+      <h1 style="font-weight: 600">VIVEK KUMAR RANA</h1>
+      <br>
+      <p>Vivek Kumar Rana is registered with Ministry of Corporate Affairs (MCA). Their DIN is 08475721. Following is their current and past directorship holdings.</p>
+    </td>
+   </tr>
+   <tr>
+    <td width="33%" style="text-align: center;margin-top: 100px;margin-bottom: 40px;">  <img src={% static 'dir.png' %} height="30%" width="30%"> </td>
+    <td>
+      <h1 style="font-weight: 600">ANCHALKUMAR SRIVASTAVA</h1>
+      <br>
+      <p>Anchalkumar Srivastava is registered with Ministry of Corporate Affairs (MCA). Their DIN is 06362653. Following is their current and past directorship holdings.</p>
+    </td>
+   </tr>
+  </table>
+</div>
+
+  <div class="container-fluid mt-4" style="background-color:  #3366ff;">
+    <center> <h3 style="font-size: 40px;color: white;margin-top: 100px;margin-bottom: 0px;font-weight:bold"> Work with us </h3></center>
+      <center>
+        <h3 style="font-size: 30px;color: white;margin-top: 100px;margin-bottom: 60px;font-weight:bold">
+     If you are finding a job in pharmacy domain then Amalgus is the best place for you
+     We provide you enough benifits for a healthy and happy life  </h3>
+     <button>
+       Know more
+     </button>
+    </center>
+  </div>
+  <footer style="background-color:white ;">
+  <center> <h3 style="font-size: 40px;color: #3366ff;margin-top: 60px;margin-bottom: 0px;font-weight:bold"> Follow us </h3> </center>
+  <center>
+    <div style="margin-top: 40px;margin-bottom: 40px;">
+    <a href="#" class="fa fa-facebook"></a> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    <a href="#" class="fa fa-twitter"></a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    <a href="#" class="fa fa-linkedin"></a>
+  </div>
+
+  </center>
+  <div style="margin-top: 30px;background-color: black;">
+    <center style="color: white;padding-top: 10px;padding-bottom: 10px;margin-bottom: 30px;"> Copyrights Amalgam Pharmacy 2020 </center>
+  </div>
+  </footer>
+  </body>
+</html>>

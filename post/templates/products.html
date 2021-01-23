@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+      our products
+  </title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon (1).ico" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" type="image/x-icon" href="static/favicon.ico" />
+</head>
+<style>
+
+  button
+  {
+    background-color: white;
+    color: black;
+    height: 100px;
+    width: 300px;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+  .fa {
+  padding: 15px;
+  font-size: 90px;
+  width: 120px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-home {
+
+  color: black;
+
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-home {
+
+  color: black;
+
+}
+    .cards
+    {
+      margin: 0 auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    grid-auto-rows: auto;
+    gap: 20px;
+    font-family: sans-serif;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+
+      }
+    .cards * {
+    box-sizing: border-box;
+}
+.card{
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  font-family: roboto;
+  text-align: center;
+}
+.card__image {
+  grid-area: image;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+
+    border-radius: 10px;
+}
+.card:hover {
+  transform: scale(1.15);
+  box-shadow:6px 6px 15px 14px #ccc;;
+}
+.card {
+...
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin:30px;
+}
+  }
+</style>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <a class="navbar-brand" href="/home">
+      {% load static %}
+   <img src="{% static 'logo.jpeg' %}" height="80px" width="300px" style="padding-left: 10px;margin-top: 0px;">
+   <a href="/home" class="fa fa-home"></a>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-link" href="/aboutus"><h2 style="font-size: 30px;color: #00264d;">&ensp;&ensp; About us </h2> </a>
+      <a class="nav-link" href="/products"><h2 style="font-size: 30px;color: #00264d;">&ensp;&ensp; Our Products </h2> </a>
+      <a class="nav-link" href="/contactus"><h2 style="font-size: 30px;color: #00264d;">&ensp;&ensp; Contact us </h2> </a>
+      <a class="nav-link" href="/blog"><h2 style="font-size: 30px;color: #00264d;">&ensp;&ensp;Blog </h2></a>
+    </div>
+  </div>
+  <hr/>
+</nav>
+<div>
+    <div class="container-fluid" style="background-color:#00264d;">
+  <center> <h3 style="font-size: 40px;color: white;padding-top: 50px;margin-bottom: 60px;font-weight:bold"> Generic medicine</h3> </center>
+{% load static %}
+  <div class="cards">
+    <div class="card">
+      <img class="card__image" src="{% static 'DSC_0095.jpeg' %}" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Vildagus</h5>
+      <p class="card-text">Super Glycemic Control. </p>
+
+          </div>
+        </div>
+         <div class="card">
+    <img class="card__image" src="{% static 'DSC_0100.jpeg' %}" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Vildagus-M</h5>
+      <p class="card-text">The Superior Anti-Diabetic Combo.</p>
+
+    </div>
+     </div>
+
+      <div class="card">
+    <img class="card__image" src="{% static 'DSC_0093.jpeg' %}" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Telgus-40</h5>
+      <p class="card-text">Effectively Controls Hypertension.</p>
+
+    </div>
+     </div>
+ <div class="card">
+    <img class="card__image" src="{% static 'DSC_0096.jpeg' %}" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Telgus-AM</h5>
+      <p class="card-text">The Dependable Antihypertensive Combination.</p>
+
+    </div>
+     </div>
+  <div class="card">
+    <img class="card__image" src="{% static 'DSC_0089.jpeg' %}" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Telgus-CT</h5>
+      <p class="card-text">For Better Control of B.P. </p>
+
+    </div>
+     </div>
+
+   <div class="card">
+    <img class="card__image" src="{% static 'DSC_0094.jpeg' %}" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Rozgus-10</h5>
+      <p class="card-text">The Most Effective Statin.</p>
+
+    </div>
+     </div>
+  <div class="card">
+    <img class="card__image" src="{% static 'DSC_0101.jpeg' %}" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Rozgus Trio</h5>
+      <p class="card-text">The Power of Three.</p>
+
+    </div>
+     </div>
+ <div class="card">
+    <img class="card__image" src="{% static 'DSC_0099.jpeg' %}" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Vitagus-4G</h5>
+      <p class="card-text">The Cherished Healthy Formula.</p>
+
+    </div>
+     </div>
+  <div class="card">
+    <img class="card__image" src="{% static 'DSC_0090.jpeg' %}" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Cefgus</h5>
+      <p class="card-text">Surpassed Effecacy ..Superior Results.</p>
+
+    </div>
+     </div>
+
+     <div class="card">
+    <img class="card__image" src="{% static 'DSC_0109.jpeg' %}" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Rozgus-20</h5>
+      <p class="card-text">The Most Effective Statin.</p>
+
+    </div>
+     </div>
+
+<div class="card">
+    <img class="card__image" src="{% static 'DSC_0108.jpeg' %}" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Levogus-M</h5>
+      <p class="card-text">Fredom to Breath.</p>
+
+    </div>
+     </div>
+
+<div class="card">
+    <img class="card__image" src="{% static 'DSC_0091.jpeg' %}" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Pangus-D</h5>
+      <p class="card-text">Treats Acidity ...Manages Reflux.</p>
+
+    </div>
+     </div>
+<div class="card">
+    <img class="card__image" src="{% static 'DSC_0097.jpeg' %}" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Welgus</h5>
+      <p class="card-text">Relieves Pain ..Reduces Inflammation ..Treats Edema.</p>
+
+    </div>
+     </div>
+     <div class="card">
+    <img class="card__image" src="{% static 'DSC_0092.jpeg' %}" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Cal Supreme</h5>
+      <p class="card-text">Provides Optimum Calcium Care.</p>
+
+    </div>
+     </div>
+     <div class="card">
+    <img class="card__image" src="{% static 'DSC_0106.jpeg' %}" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Vitagus</h5>
+      <p class="card-text">Idea for Growth & Development.</p>
+
+    </div>
+     </div>
+     <div class="card">
+    <img class="card__image" src="{% static 'DSC_0086.jpeg' %}" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Hemgus XT</h5>
+      <p class="card-text">When Body Needs Iron ..Hemgus Xt ..The Superior One.</p>
+
+    </div>
+     </div>
+     <div class="card">
+    <img class="card__image" src="{% static 'DSC_0111.jpeg' %}" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Virogus</h5>
+      <p class="card-text">Effective Defence Against Germs && Virus.</p>
+
+    </div>
+     </div>
+</div>
+
+</div>
+
+
+
+
+
+<div class="container-fluid mt-4" style="background-color:  #3366ff;">
+    <center> <h3 style="font-size: 40px;color: white;padding-top: 100px;margin-bottom: 0px;font-weight:bold"> Work with us </h3> </center>
+    <center>
+      <h3 style="font-size: 30px;color: white;margin-top: 100px;margin-bottom: 60px;font-weight:bold">
+        If you are finding a job in pharmacy domain then Amalgus is the best place for you
+        We provide you enough benifits for a healthy and happy life  </h3>
+      <button>
+        Know more
+      </button>
+    </center>
+  </div>
+ <footer style="background-color:white ;">
+    <center> <h3 style="font-size: 40px;color: #3366ff;margin-top: 60px;margin-bottom: 0px;font-weight:bold"> Follow us </h3> </center>
+    <center>
+      <div style="margin-top: 40px;margin-bottom: 40px;">
+        <a href="#" class="fa fa-facebook"></a> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        <a href="#" class="fa fa-twitter"></a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        <a href="#" class="fa fa-linkedin"></a>
+      </div>
+    </center>
+    <div style="margin-top: 30px;background-color: black;">
+      <center style="color: white;padding-top: 10px;padding-bottom: 10px;margin-bottom: 30px;"> Copyrights Amalgam Pharmacy 2020 </center>
+    </div>
+  </footer>
+
+</body>
+</html>

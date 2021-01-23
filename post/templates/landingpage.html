@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Amalgus
+  </title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" type="image/x-icon" href="static/favicon.ico" />
+</head>
+<style>
+  button
+  {
+    background-color: white;
+    color: black;
+    height: 100px;
+    width: 300px;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 30px;
+    margin-left:60px;
+  }
+  .fa {
+  padding: 15px;
+  font-size: 90px;
+  width: 120px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-home {
+
+  color: black;
+
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+#postbtn
+{
+     background-color: white;
+    color: black;
+    height: 100px;
+    width: 300px;
+    border-radius: 50px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+@media(max-width: 500px)
+  {
+    .card-deck,.card
+    {
+      display: block;
+      width: 100%;
+    }
+  }
+#loader {
+			border: 12px solid #f3f3f3;
+			border-radius: 50%;
+			border-top: 12px solid #444444;
+			width: 70px;
+			height: 70px;
+			animation: spin 1s linear infinite;
+		}
+
+		@keyframes spin {
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		.center {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+</style>
+{% load static %}
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <a class="navbar-brand" href="/home">
+    <img src="{% static 'logo.jpeg' %}" height="80px" width="300px" style="padding-left: 10px;margin-top: 0px;">
+     <a href="/home" class="fa fa-home"></a>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-link" href="/aboutus"><h2 style="font-size: 30px;color: #00264d;">&ensp;&ensp; About us </h2> </a>
+      <a class="nav-link" href="/products"><h2 style="font-size: 30px;color: #00264d;">&ensp;&ensp; Our Products </h2> </a>
+      <a class="nav-link" href="/contactus"><h2 style="font-size: 30px;color: #00264d;">&ensp;&ensp; Contact us </h2> </a>
+      <a class="nav-link" href="/blog"><h2 style="font-size: 30px;color: #00264d;">&ensp;&ensp;Blog </h2></a>
+    </div>
+  </div>
+  <hr/>
+</nav>
+<div class="container-fluid mt-0">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'DSC_01.jpeg' %}" class="d-block w-100" height="600px" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'DSC_02.jpeg' %}" class="d-block w-100" height="600px" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'DSC_03.jpeg' %}" class="d-block w-100" height="600px" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'DSC_04.jpeg' %}" class="d-block w-100" height="600px" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'DSC_05.jpeg' %}" class="d-block w-100" height="600px" alt="...">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black;" ></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    <div class="container-fluid mt-4">
+      <center> <h3 style="font-size: 40px;color: #00264d;margin-top: 100px;margin-bottom: 60px;font-weight:bold"> Visualize </h3> </center>
+    </div>
+  </div>
+  <div class="container-fluid" style="font-size: 25px;color: #00264d;">
+    <center>
+      Innovates to Improve Quality of Life <br/>
+    </center>
+
+  </div>
+  <div class="container-fluid" style="background-color:#00264d;padding-bottom: 150px;margin-top: 200px;">
+    <center> <h3 style="font-size: 40px;color: white;padding-top: 50px;margin-bottom: 60px;font-weight:bold"> Our Media </h3> </center>
+    <!-- contents of our post -->
+  <div class="card-deck">
+  {% for post in posts %}
+  <div class="card">
+    <img src="{{ post.img.url }}" height="50%" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"> {{post.title}} </h5>
+      <p class="card-text"> {{post.blogtext}} </p>
+      <p class="card-text"><small class="text-muted"> Added on : {{post.date}} </small></p>
+    </div>
+  </div>
+  {% endfor %}
+  </div>
+  <center>
+   <a href="/blog">
+   <button id="postbtn">
+        Know more
+    </button>
+    </a>
+    </center>
+</div>
+
+  </div>
+  <div class="container-fluid mt-4" style="background-color:  #3366ff;">
+    <center> <h3 style="font-size: 40px;color: white;padding-top: 100px;margin-bottom: 0px;font-weight:bold"> Work with us </h3> </center>
+    <center>
+      <h3 style="font-size: 30px;color: white;margin-top: 100px;margin-bottom: 60px;font-weight:bold">
+        If you are finding a job in pharmacy domain then Amalgus is the best place for you
+        We provide you enough benifits for a healthy and happy life  </h3>
+      <button>
+        apply here
+      </button>
+      <a href="\admin">
+      <button>
+        for Admin
+      </button>
+      </a>
+    </center>
+  </div>
+  <footer style="background-color:white ;">
+    <center> <h3 style="font-size: 40px;color: #3366ff;margin-top: 60px;margin-bottom: 0px;font-weight:bold"> Follow us </h3> </center>
+    <center>
+      <div style="margin-top: 40px;margin-bottom: 40px;">
+        <a href="#" class="fa fa-facebook"></a> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        <a href="#" class="fa fa-twitter"></a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        <a href="#" class="fa fa-linkedin"></a>
+      </div>
+    </center>
+    <div style="margin-top: 30px;background-color: black;">
+      <center style="color: white;padding-top: 10px;padding-bottom: 10px;margin-bottom: 30px;"> Copyrights Amalgam Pharmacy 2020 </center>
+    </div>
+  </footer>
+</div>
+<div id="loader" class="center"></div>
+	<script>
+		document.onreadystatechange = function() {
+			if (document.readyState !== "complete") {
+				document.querySelector(
+				"body").style.visibility = "hidden";
+				document.querySelector(
+				"#loader").style.visibility = "visible";
+			} else {
+				document.querySelector(
+				"#loader").style.display = "none";
+				document.querySelector(
+				"body").style.visibility = "visible";
+			}
+		};
+	</script>
+</body>
+</html>
