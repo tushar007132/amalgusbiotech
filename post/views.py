@@ -16,11 +16,11 @@ def submit(request):
 
         s.starttls()
 
-        s.login("amalgusformresponse@gmail.com", "amalgus1213")
+        s.login("your_email", "your_password")
 
         message_text = "Person Details who wants to contact with us :  Name     email id     mobile number   message \n"+name+"\t\t"+email+"\t\t"+mob+"\t\t"+message
 
-        s.sendmail("amalgusformresponse@gmail.com", "amalgusbiotechpvtltd@gmail.com", message_text)
+        s.sendmail("senders_mail_id", "receivers_mail_id", message_text)
 
         s.quit()
 
@@ -45,20 +45,6 @@ def home(request):
 def home1(request):
     posts=PostContent.objects.order_by('-date')[:3]
     return render(request,'landingpage.html',{'posts':posts})
-
-def afterlogin(request):
-    if(request.method=="POST"):
-        username=request.POST.get("username")
-        password=request.POST.get("password")
-
-        if(username=="amalgus@admin" and password=="amal04gus03"):
-            return render(request,'dashboard.html')
-        else:
-            #msg="wrong username or password"
-
-            return render(request,'login.html')
-    else:
-        return render(request,'error.html')
 
 def login(request):
     return render(request,'login.html')
